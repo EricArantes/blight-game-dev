@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/script.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Blight</title>
+</head>
+<body>
+    <div class="bars-wrapper">
+        <div class="navbar">
+            <ul>
+                <li><a href="">A</a></li>
+                <li><a href="">B</a></li>
+                <li><a href="">C</a></li>
+                <li><a href="">D</a></li>
+              </ul>
+        </div>
+    
+        <div class="resource-bar">
+            <ul>
+                <li><img src="assets/img/biomass.png" alt=""></li>
+                <li> 10 </li>
+                <li> <img src="assets/img/geneticmaterial.png" alt=""> </li>
+                <li> 10 </li>
+                <li> <img src="assets/img/nutrients.png" alt=""> </li>
+                <li> 10 </li>
+              </ul>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="sidebar-left">
+            <div class="sidebar-left-title" id="grow-title">
+                GROW
+            </div>
+            <div class="sidebar-left-title" id="evolve-title">
+                EVOLVE
+            </div>
+            <div class="sidebar-left-title" id="adapt-title">
+                ADAPT
+            </div>
+            <div class="sidebar-left-title" id="overcome-title">
+                OVERCOME
+            </div>
+            <div class="sidebar-left-tab-switch">
+                <ul>
+                    <button onclick="sidebarLeftToggle('grow')" id="grow-toggle" class="sidebar-left-tab-switch-button">1</button>
+                    <button onclick="sidebarLeftToggle('evolve')" id="evolve-toggle" class="sidebar-left-tab-switch-button">2</button>
+                    <button onclick="sidebarLeftToggle('adapt')" id="adapt-toggle" class="sidebar-left-tab-switch-button">3</button>
+                    <button onclick="sidebarLeftToggle('overcome')" id="overcome-toggle" class="sidebar-left-tab-switch-button">4</button>
+                  </ul>
+            </div>
+
+            <div class="tab-content-wrapper">
+                    <!-- GROW TAB OPEN -->
+                    <div class="tab-content" id="grow-tab-content">
+                        <!-- GROW TAB ITEMS -->
+                        <div class="grow-item tab-item">
+                            <span class="item-title grow-item-title">Polyp</span>
+                            <div class="item-price-wrapper">
+                                <span class="item-price grow-item-price">5</span><img src="assets/img/biomass.png">
+                            </div>
+                            <div class="item-description-wrapper grow-item-description-wrapper">
+                                <p class="item-description">+1 Polyp</p>
+                            </div>
+                        </div>
+
+                        <div class="grow-item tab-item">
+                            <span class="item-title grow-item-title">Mycelium</span>
+                            <div class="item-price-wrapper">
+                                <span class="item-price grow-item-price">5</span><img src="assets/img/biomass.png">
+                            </div>
+                            <div class="item-description-wrapper grow-item-description-wrapper">
+                                <p class="item-description">+20<img src="assets/img/nutrients.png"></p>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- GROW TAB ITEMS -->
+                    <!-- GROW TAB CLOSE -->
+
+                <!-- EVOLVE TAB OPEN -->
+                <div class="tab-content" id="evolve-tab-content">
+
+                    <!-- EVOLVE TAB ITEMS -->
+                    <div class="evolve-item tab-item">
+                        <span class="item-title evolve-item-title">Intermingling</span>
+                        <div class="item-price-wrapper">
+                            <span class="item-price evolve-item-price">10</span> <img src="assets/img/geneticmaterial.png">
+                        </div>
+                        <div class="item-description-wrapper evolve-item-description-wrapper">
+                            <p class="item-description">Allows GROWING spores, unlocks new evolve actions </p>
+                        </div>
+                    </div>
+                    <!-- EVOLVE TAB ITEMS -->
+
+                </div>
+                <!-- EVOLVE TAB CLOSE -->
+
+                <!-- ADAPT TAB OPEN -->
+                <div class="tab-content" id="adapt-tab-content">
+                    <div class="adapt-select-wrapper select-item-wrapper">
+                        <select name="cluster-select" class="item-select" id="">
+                            <option value="cluster-1" class="item-option">Cluster 1</option>
+                            <option value="cluster-2" class="item-option">Cluster 2</option>
+                            <option value="cluster-3" class="item-option">Cluster 3</option>
+                        </select>
+                    </div>
+                    <div class="cluster-equip-wrapper">
+                        <span class="cluster-equip-item" id="cluster-equip-1"></span>
+                        <span class="cluster-equip-item" id="cluster-equip-2"></span>
+                        <span class="cluster-equip-item" id="cluster-equip-3"></span>
+                        <span class="cluster-equip-item" id="cluster-equip-4"></span>
+                        <span class="cluster-equip-item" id="cluster-equip-5"></span>
+                        <span class="cluster-equip-item" id="cluster-equip-6"></span>
+                        <span class="cluster-equip-item" id="cluster-equip-7"></span>
+                        <span class="cluster-equip-item" id="cluster-equip-8"></span>
+                        <span class="cluster-equip-item" id="cluster-equip-9"></span>
+                    </div>
+                    <div class="adapt-submit-buttons-wrapper">
+                        <button class="apply-cluster-button">apply</button>
+                    </div>
+                </div>
+                <!-- ADAPT TAB CLOSE -->
+
+                <!-- OVERCOME TAB OPEN -->
+                <div class="tab-content" id="overcome-tab-content">
+                    placeholder
+                </div>
+                <!-- OVERCOME TAB CLOSE -->
+            </div>
+        </div>
+
+        <div class="planet-map">
+
+            <div class="planet-properties-bar">
+                <ul>
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                  </ul>
+            </div>
+
+            <table class="sector-table">
+                <tr>
+                    <td>1, 1</td>
+                    <td>1, 2</td>
+                    <td>1, 3</td>
+                    <td>1, 4</td>
+                    <td>1, 5</td>
+                </tr>
+
+                <tr>
+                    <td>2, 1</td>
+                    <td>2, 2</td>
+                    <td>2, 3</td>
+                    <td>2, 4</td>
+                    <td>2, 5</td>
+                </tr>
+
+                <tr>
+                    <td>3, 1</td>
+                    <td>3, 2</td>
+                    <td>3, 3</td>
+                    <td>3, 4</td>
+                    <td>3, 5</td>
+                </tr>
+                
+                <tr>
+                    <td>4, 1</td>
+                    <td>4, 2</td>
+                    <td>4, 3</td>
+                    <td>4, 4</td>
+                    <td>4, 5</td>
+                </tr>
+
+                <tr>
+                    <td>5, 1</td>
+                    <td>5, 2</td>
+                    <td>5, 3</td>
+                    <td>5, 4</td>
+                    <td>5, 5</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="sidebar-right">
+            lol
+        </div>
+    </div>
+
+
+
+</body>
+</html>
