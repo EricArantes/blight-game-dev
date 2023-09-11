@@ -10,23 +10,12 @@
 </head>
 <body>
     <div class="bars-wrapper">
-        <div class="navbar">
-            <ul>
-                <li><a href="">A</a></li>
-                <li><a href="">B</a></li>
-                <li><a href="">C</a></li>
-                <li><a href="">D</a></li>
-              </ul>
-        </div>
     
         <div class="resource-bar">
             <ul>
-                <li><img src="assets/img/biomass.png" alt=""></li>
-                <li> 10 </li>
-                <li> <img src="assets/img/geneticmaterial.png" alt=""> </li>
-                <li> 10 </li>
-                <li> <img src="assets/img/nutrients.png" alt=""> </li>
-                <li> 10 </li>
+                <li><img src="assets/img/biomass.png" alt=""> 10 </li>
+                <li> <img src="assets/img/geneticmaterial.png" alt=""> 10 </li>
+                <li> <img src="assets/img/nutrients.png" alt=""> 10 </li>
               </ul>
         </div>
     </div>
@@ -167,13 +156,14 @@
 
         <div class="planet-map">
 
+            <div class="turn-count">
+                TURN 1
+            </div>
+
             <div class="planet-properties-bar">
-                <ul>
-                    <li><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">4</a></li>
-                  </ul>
+                <div class="planet-property" onclick="postThis(this)" >
+                    <p class="planet-property-description">Current season > Summer</p>
+                </div>
             </div>
 
             <table class="sector-table">
@@ -229,7 +219,8 @@
                 <div class="cluster-item tab-item">
                     <span class="item-title cluster-item-title">Polyp Cluster</span>
                     <div class="cluster-unit-count-wrapper">
-                        <span class="cluster-unit-count">10</span>
+                        <span class="cluster-unit-count">10 <img src="assets/img/polyp.png" alt=""> </span>
+                        <span class="cluster-unit-nut">-10 <img src="assets/img/nutrients.png" alt=""></span>
                     </div>
                     <div class="cluster-action-wrapper">
                         <div class="cluster-action">
@@ -243,7 +234,7 @@
                 </div>
 
             </div>
-            <div class="sidebar-right-action-log">
+            <div class="sidebar-right-action-log" id="action-log">
 
             </div>
         </div>
