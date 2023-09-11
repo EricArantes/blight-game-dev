@@ -232,12 +232,97 @@ td:hover{
 
 .sidebar-right {
 
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 55% 40%;
+
     height: 100%;
     width: 20%;
 
     border: 1px solid yellow;
 
 }
+
+.sidebar-right-unit-count {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50px);
+    grid-template-rows: 100%;
+
+    height: 100%;
+    width: 100%;
+
+    padding: 2px;
+    border: 1px solid yellow;
+}
+
+.unit-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 100%;
+    width: 100%;
+
+    border: 1px solid blue;
+}
+
+.unit-count-img {
+    height: 100%;
+    width: calc(50% * 100%);
+
+
+}
+
+.sidebar-right-cluster-display {
+    border: 1px solid red;
+}
+
+.cluster-unit-count {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    padding-right: 5px;
+    background-color: transparent;
+}
+
+.cluster-unit-count-wrapper{
+    display: grid;
+    grid-template-columns: 80% 20%;
+
+    padding: 2px;
+
+    background-color: transparent;
+}
+
+.cluster-action-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 1px var(--border-2) solid;
+    border-top: transparent;
+    height: fit-content;
+    width: 100%;
+
+    background-color: var(--bg-2);
+
+    grid-column: span 2;
+}
+
+.cluster-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 30px;
+    margin-right: 3px;
+    width: fit-content;
+
+    border: 1px solid green;
+}
+
+
 
 .tab-content-wrapper {
     display: flex;
@@ -390,7 +475,7 @@ td:hover{
     justify-content: center;
     align-content: center;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));;
+    grid-template-rows: repeat(auto-fill, minmax(20px, 1rem));
     overflow: auto;
 
     height: 100%;
@@ -417,6 +502,9 @@ td:hover{
     border: 3px outset var(--border-1);
     border-top: transparent;
     padding: 5px;
+
+    grid-row: span 10;
+
 }
 
 .cluster-equip-item {
@@ -434,6 +522,15 @@ td:hover{
 
 }
 
+#create-cluster-title {
+    display: inline-block;
+    white-space: nowrap;
+
+    padding: 2px;
+
+    background-color: transparent;
+}
+
 .cluster-equip-item:hover{
     cursor: pointer;
     filter: brightness(200%);
@@ -441,6 +538,90 @@ td:hover{
 
 .cluster-equip-item:active {
     transform: translate(0px, 1px);
+}
+
+.cluster-type-select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    height: fit-content;
+    width: 100%;
+
+    border: 3px outset var(--border-1);
+
+    grid-row: span 4;
+
+}
+
+.cluster-type-title {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-1);
+}
+
+.cluster-amount-select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    height: fit-content;
+    width: 100%;
+
+    border: 3px outset var(--border-1);
+
+    grid-row: span 4;
+}
+
+.cluster-amount-input::-webkit-inner-spin-button,
+.cluster-amount-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.cluster-amount-input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.cluster-amount-input:hover {
+    filter: brightness(200%);
+}
+
+.cluster-amount-input:active{
+    transform: translate(0px, 1px);
+}
+
+.cluster-amount-input {
+    text-align: center;
+    cursor: pointer;
+
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px inset orange;
+
+    width: 50px;
+    height: 50px;
+
+    color: orange;
+    font-size: large;
+
+}
+
+.cluster-amount-title {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-1);
 }
 
 .adapt-submit-buttons-wrapper {
@@ -452,10 +633,6 @@ td:hover{
 
     height: fit-content;
     width: 100%;
-
-    position: relative; /* Make the position relative */
-    top: 180px; /* Adjust the top value to position it relative to the element above */
-    transform: translateY(-50%); /* Vertically center the content within the box */
   
 }
 

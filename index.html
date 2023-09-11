@@ -101,12 +101,21 @@
 
                 <!-- ADAPT TAB OPEN -->
                 <div class="tab-content" id="adapt-tab-content">
+
+                    <!--
+
                     <div class="adapt-select-wrapper select-item-wrapper">
                         <select name="cluster-select" class="item-select" id="">
                             <option value="cluster-1" class="item-option">Cluster 1</option>
                             <option value="cluster-2" class="item-option">Cluster 2</option>
                             <option value="cluster-3" class="item-option">Cluster 3</option>
                         </select>
+                    </div>
+
+                    -->
+
+                    <div class="adapt-select-wrapper">
+                        <span id="create-cluster-title"> Cluster Traits </span>
                     </div>
                     <div class="cluster-equip-wrapper">
                         <span class="cluster-equip-item" id="cluster-equip-1"></span>
@@ -119,8 +128,23 @@
                         <span class="cluster-equip-item" id="cluster-equip-8"></span>
                         <span class="cluster-equip-item" id="cluster-equip-9"></span>
                     </div>
+                    
+                    <div class="cluster-type-select">
+                        <span class="cluster-type-title item-title">Cluster Type</span>
+                        <span class="cluster-equip-item cluster-type-select-box"></span>
+                    </div>
+
+                    <div class="cluster-amount-select">
+                        <span class="cluster-amount-title item-title">Unit Amount</span>
+                        <input type="number" class="cluster-amount-input">
+                    </div>
+
+                    <div class="total-cluster-cost-wrapper">
+                        <span class="total-cluster-cost"></span>
+                    </div>
+
                     <div class="adapt-submit-buttons-wrapper">
-                        <button class="apply-cluster-button">apply</button>
+                        <button class="apply-cluster-button">Create</button>
                     </div>
                 </div>
                 <!-- ADAPT TAB CLOSE -->
@@ -197,7 +221,31 @@
         </div>
 
         <div class="sidebar-right">
-            lol
+            <div class="sidebar-right-unit-count">
+                <span class="unit-count"><img class="unit-count-img" src="assets/img/polyp.png" alt=""> 0</span>
+            </div>
+            <div class="sidebar-right-cluster-display">
+
+                <div class="cluster-item tab-item">
+                    <span class="item-title cluster-item-title">Polyp Cluster</span>
+                    <div class="cluster-unit-count-wrapper">
+                        <span class="cluster-unit-count">10</span>
+                    </div>
+                    <div class="cluster-action-wrapper">
+                        <div class="cluster-action">
+                            <p class="item-description">+1 <img src="assets/img/biomass.png" alt=""> /t</p>
+                        </div>
+
+                        <div class="cluster-action">
+                            <p class="item-description">+1 <img src="assets/img/geneticmaterial.png" alt=""> /t</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="sidebar-right-action-log">
+
+            </div>
         </div>
     </div>
 
